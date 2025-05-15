@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eafcfc;
+    color: #333;
+    text-align: center;
+}
+
+.menu-boton {
+    font-size: 20px;
+    cursor: pointer;
+    background: #eee;
+    padding: 10px 15px;
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    border-radius: 8px;
+    z-index: 2000;
+}
+
+.menu-lateral {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.9);
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 1500;
+}
+
+.menu-lateral a {
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.menu-lateral a:hover {
+    background-color: #444;
+}
+
+.banner {
+    padding: 60px 20px 20px;
+    background: #b3ecff;
+}
+
+.banner h2 {
+    font-size: 36px;
+    color: #000;
+}
+
+.banner h2 span {
+    font-weight: lighter;
+    opacity: 0.8;
+}
+
+.mision-vision {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 300px;
+}
+
+.valores {
+    margin: 40px 0;
+}
+
+.valores-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.valor {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 220px;
+    box-shadow:  0 4px 6px rgba(0,0,0,0.1);
+}
+
+.valor i {
+    font-size: 24px;
+    margin-bottom: 10px;
+    display: block;
+    color: #00c4cc;
+}
+
+footer {
+    padding: 20px;
+    background: #e0fafd;
+    font-size: 14px;
+}
+
+.redes a {
+    color: #333;
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .banner h2 {
+        font-size: 28px;
+    }
+
+    .menu-boton {
+        font-size: 18px;
+        padding: 8px 12px;
+    }
+
+    .card{
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .valores-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner h2 {
+        font-size: 24x;
+    }
+
+    .menu-boton {
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+
+    .menu-lateral a {
+        font-size: 18px;
+        padding: 8px 20px;
+    }
+}

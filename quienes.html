@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quienes Somos?</title>
+    <link rel="stylesheet" href="quienes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+    <div id="menu-boton" class="menu-boton" onclick="toggleMenu()">&#9776: Menú</div>
+
+    <div id="menu-lateral" class="menu-lateral">
+        <a href="index.html">Inicio</a>
+        <a href="quienes.html">¿Quienes Somos?</a>
+        <a href="ofertas.html">Ofertas</a>
+        <a href="pedidos.html">Pedidos</a>
+        <a href="contactos.html">Contactanos</a>
+    </div>
+
+    <header class="banner">
+        <h2>
+            <span class="titulo-quienes">¿QUIÉNES</span>
+            <span class="titulo-somos">SOMOS?</span>
+        </h2>
+    </header>
+
+    <section class="mision-vision">
+        <div class="card">
+            <h3><i class="fas fa-bullseye"></i> Nuestra Misión</h3>
+            <p>Proveer tecnologia accesible y confiable para mejorar la vida de nuestros clientes.</p>
+        </div>
+        <div class="card">
+            <h3><i class="fas fa-eye"></i> Nuestra Visión</h3>
+            <p>Ser lideres en soluciones tecnologicas. Impulpsando la innovación y el desarrollo sostenible. </p>
+        </div>
+    </section>
+
+    <section class="valores">
+        <h2><i class="fas fa-gem"></i> Nuestros Valores</h2>
+        <div class="valores-grid">
+            <div class="valor"><i class="fas fa-heart"></i><strong> Pasión</strong><p>Hacemos lo que nos gusta con entusiasmo y compromiso.</p></div>
+
+            <div class="valor"><i class="fas fa-sync-alt"></i><strong> Resilencia</strong><p>Nos adaptamos y superamos desafios con determinación.</p></div>
+
+            <div class="valor"><i class="fas fa-handshake"></i><strong> Empatía</strong><p>Nos identificamos con nuestros clientes y buscamos su bienestar.</p></div>
+
+            <div class="valor"><i class="fas fa-shield-alt"></i><strong> Transparencia</strong><p>Actuamos con honestatidad y claridad en todo momento.</p></div>
+        </div>      
+    </section>
+
+    <footer>
+        <div class="redes">
+            <a href="https://www.facebook.com/alexis.pulache.58" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/jefer.xz_/"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p>&copy; 2025 Creado Por Jefer Pulache - Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        let menuAbierto = false;
+
+        function toggleMenu() {
+            const menu = document.getElementById("menu-lateral");
+            const boton = document.getElementById("menu-boton");
+
+            if (menuAbierto) {
+                menu.style.width = "0";
+                boton.innerHTML = "&#9776; Menú";
+                menuAbierto = false;
+            } else {
+                menu.style.width = "250px";
+                boton.innerHTML = "&times; Menú";
+                menuAbierto = true;
+            }
+        }
+
+        document.querySelectorAll('.menu-lateral a').forEach(link => {
+            link.addEventListener('clip', () =>{
+                if (menuAbierto) toggleMenu();
+            });
+        });
+    </script>  
+</body>
+</html>

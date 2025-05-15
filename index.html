@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda JP</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <div id="menu-boton" class="menu-boton" onclick="toggleMenu()">&#9776: Menú</div>
+
+    <div id="menu-lateral" class="menu-lateral">
+        <a href="index.html">Inicio</a>
+        <a href="quienes.html">¿Quienes Somos?</a>
+        <a href="ofertas.html">Ofertas</a>
+        <a href="pedidos.html">Pedidos</a>
+        <a href="contactos.html">Contactanos</a>
+    </div>
+
+
+
+
+    <header class="banner">
+        <img src="img/JPBANNER.png" alt="Banner Tienda" class="banner-img">
+    </header>
+
+    <h2 class="titulo">Nuestros Productos</h2>
+
+    <section class="productos">
+
+        <div class="producto">
+            <img src="img/Lapto1.webp" alt="Laptop GIGABYTE">
+            <h3>Laptop GIGABYTE</h3>
+            <P>Core i5 | 16GB RAM | SSD 512GB</P>
+            <span class="precio">S/ 3.999</span>
+            <button><i class="fas fa-cart-shoping"></i>Comprar</button>
+        </div>
+
+        <div class="producto">
+            <img src="img/laptop2.avif" alt="Laptop GIGABYTE">
+            <h3>Laptop LENOVO</h3>
+            <P>Ryzen 5 | 8GB RAM | SSD 512GB</P>
+            <span class="precio">S/ 2.899</span>
+            <button><i class="fas fa-cart-shoping"></i>Comprar</button>
+        </div>
+
+        <div class="producto">
+            <img src="img/Laptp3.jpg" alt="Laptop GIGABYTE">
+            <h3>Laptop ACER</h3>
+            <P>Core i7 | GEFORCE GTX | SSD 512GB</P>
+            <span class="precio">S/ 4.999</span>
+            <button><i class="fas fa-cart-shoping"></i>Comprar</button>
+        </div>
+
+        <div class="producto">
+            <img src="img/Laptop4.webp" alt="Laptop GIGABYTE">
+            <h3>Laptop ASUS</h3>            
+            <P>Core i5 | 8GB RAM | SSD 512GB</P>
+            <span class="precio">S/ 2.999</span>
+            <button><i class="fas fa-cart-shoping"></i>Comprar</button>
+        </div>
+
+    </section>
+    
+    <footer>
+        <div class="redes">
+            <a href="https://www.facebook.com/alexis.pulache.58" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/jefer.xz_/"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p>&copy; 2025 Creado Por Jefer Pulache - Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        let menuAbierto = false;
+
+        function toggleMenu() {
+            const menu = document.getElementById("menu-lateral");
+            const boton = document.getElementById("menu-boton");
+
+            if (menuAbierto) {
+                menu.style.width = "0";
+                boton.innerHTML = "&#9776; Menú";
+                menuAbierto = false;
+            } else {
+                menu.style.width = "250px";
+                boton.innerHTML = "&times; Menú";
+                menuAbierto = true;
+            }
+        }
+    </script>
+    
+</body>
+</html>
